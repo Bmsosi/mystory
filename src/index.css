@@ -1,0 +1,354 @@
+/* Existing root remains the same for base styling */
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --bg: #ffffff;
+  --text: #1e293b;
+  --text-muted: #64748b;
+  --accent: #f8fafc;
+  --border: #e2e8f0;
+  --card-bg: #ffffff;
+  --timeline-line: #cbd5e1;
+
+  --max-width: 1200px;
+  /* Increased for more dynamic layouts */
+  --header-height: 70px;
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color: var(--text);
+  background-color: var(--bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Country Themes */
+.theme-burundi {
+  --primary: #059669;
+  /* Green from flag */
+  --primary-hover: #047857;
+  --accent: #fef2f2;
+  /* Subtle red tint */
+}
+
+.theme-egypt {
+  --primary: #b45309;
+  /* Golden/Desert tone */
+  --primary-hover: #92400e;
+  --accent: #fffbeb;
+}
+
+.theme-canada {
+  --primary: #dc2626;
+  /* Maple Red */
+  --primary-hover: #b91c1c;
+  --accent: #fef2f2;
+}
+
+.theme-mexico {
+  --primary: #15803d;
+  /* Flag Green */
+  --primary-hover: #166534;
+  --accent: #f0fdf4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #60a5fa;
+    --primary-hover: #93c5fd;
+    --bg: #0f172a;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #1e293b;
+    --border: #334155;
+    --card-bg: #1e293b;
+    --timeline-line: #475569;
+  }
+
+  .theme-burundi {
+    --accent: #064e3b;
+  }
+
+  .theme-egypt {
+    --accent: #451a03;
+  }
+
+  .theme-canada {
+    --accent: #450a0a;
+  }
+
+  .theme-mexico {
+    --accent: #064e3b;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  transition: background-color 0.5s ease;
+}
+
+/* Layout Utilities */
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+
+  .flex-row,
+  .flex-row-reverse {
+    flex-direction: column !important;
+    text-align: center;
+  }
+}
+
+/* Background Patterns */
+.bg-dots {
+  background-image: radial-gradient(var(--border) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-waves {
+  background:
+    radial-gradient(circle at 100% 50%, transparent 20%, var(--accent) 21%, var(--accent) 34%, transparent 35%, transparent),
+    radial-gradient(circle at 0% 50%, transparent 20%, var(--accent) 21%, var(--accent) 34%, transparent 35%, transparent) 0 -50px;
+  background-size: 75px 100px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: var(--text-muted);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+section {
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+
+/* Lightbox Styles */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  cursor: zoom-out;
+  padding: 40px;
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.3s ease;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  animation: scaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 10px;
+  line-height: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.gallery-item-wrapper {
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+
+/* Animated Gallery Background */
+.animated-grid-bg {
+  background: linear-gradient(-45deg, #0f172a, #1a1a2e, #16213e, #0d1b2a);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  position: relative;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Gallery Page - ensure dark background */
+.gallery-page {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* Glass morphism card for gallery sections */
+.glass {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  color: white;
+}
+
+.glass h1,
+.glass h2,
+.glass h3,
+.glass h4 {
+  color: white;
+}
+
+.glass p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* Premium Image Border */
+.premium-border {
+  position: relative;
+  padding: 8px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.premium-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--primary), transparent, var(--primary));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.5;
+  transition: opacity 0.4s ease;
+}
+
+.premium-border:hover::before {
+  opacity: 1;
+}
+
+/* Grid Spans */
+.span-2 {
+  grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+  .span-2 {
+    grid-column: span 1;
+  }
+}
