@@ -10,6 +10,7 @@ const England = () => {
             description={t.countries.england.desc}
             timezone="Europe/London"
             coordinates={{ lat: 51.5074, lng: -0.1278 }}
+            galleryLink="/gallery/england"
         />
     );
 };

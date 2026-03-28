@@ -58,6 +58,24 @@ const Gallery = () => {
     import: "default",
   });
   const senegalCount = Object.values(senegalImgs).length;
+  const englandImgs = import.meta.glob("../england_gallery/*.{jpg,jpeg,png,JPG}", {
+    eager: true,
+    query: "?url",
+    import: "default",
+  });
+  const englandCount = Object.values(englandImgs).length;
+  const kenyaImgs = import.meta.glob("../kenya_gallery/*.{jpg,jpeg,png,JPG}", {
+    eager: true,
+    query: "?url",
+    import: "default",
+  });
+  const kenyaCount = Object.values(kenyaImgs).length;
+  const scotlandImgs = import.meta.glob("../scotland_gallery/*.{jpg,jpeg,png,JPG}", {
+    eager: true,
+    query: "?url",
+    import: "default",
+  });
+  const scotlandCount = Object.values(scotlandImgs).length;
 
   const galleries = [
     {
@@ -78,8 +96,18 @@ const Gallery = () => {
       image: mexicoImg,
       count: mexicoCount,
     },
-    { name: t.countries.england.name, path: "#", image: englandImg, count: 0 },
-    { name: t.countries.kenya.name, path: "#", image: kenyaImg, count: 0 },
+    {
+      name: t.countries.england.name,
+      path: "/gallery/england",
+      image: englandImg,
+      count: englandCount,
+    },
+    {
+      name: t.countries.kenya.name,
+      path: "/gallery/kenya",
+      image: kenyaImg,
+      count: kenyaCount,
+    },
     { name: t.countries.canada.name, path: "/gallery/canada", image: canadaImg, count: canadaCount },
     { name: t.countries.uganda.name, path: "#", image: ugandaImg, count: 0 },
     { name: t.countries.rwanda.name, path: "#", image: rwandaImg, count: 0 },
@@ -92,9 +120,9 @@ const Gallery = () => {
     { name: t.countries.senegal.name, path: "/gallery/senegal", image: senegalImg, count: senegalCount },
     {
       name: t.countries.scotland.name,
-      path: "#",
+      path: "/gallery/scotland",
       image: scotlandImg,
-      count: 0,
+      count: scotlandCount,
     },
   ];
 

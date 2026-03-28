@@ -267,10 +267,18 @@ export const translations = {
       england: {
         name: "England: Professional Roots",
         desc: "My time in England (2013 and 2015-2018) allowed me to build deep professional roots and appreciate the unique blend of tradition and modernity.",
+        galleryTitle: "England Photo Gallery",
+        gallerySub:
+          "Memories from London, Brighton, Canterbury, and the professional chapter that shaped my journey in England.",
+        backToCountry: "Back to England",
       },
       kenya: {
         name: "Kenya: East African Vibes",
         desc: "Living in Kenya in 2014 provided a fresh perspective on East African innovation and natural beauty, strengthening my regional connections.",
+        galleryTitle: "Kenya Photo Gallery",
+        gallerySub:
+          "Snapshots from Nairobi, Maasai Mara, Ngong Hills, and the people and places that marked my Kenyan chapter.",
+        backToCountry: "Back to Kenya",
       },
       canada: {
         name: "Canada: The New Frontier",
@@ -299,6 +307,10 @@ export const translations = {
       scotland: {
         name: "Scotland: Highlands and History",
         desc: "Discovering the rugged beauty and deep history of the Scottish landscapes during my UK stay.",
+        galleryTitle: "Scotland Photo Gallery",
+        gallerySub:
+          "A short visual collection from Scotland, from city landmarks to hillside views during my UK travels.",
+        backToCountry: "Back to Scotland",
       },
     },
   },
@@ -566,10 +578,18 @@ export const translations = {
       england: {
         name: "Uingereza: Mizizi ya Kitaalamu",
         desc: "Wakati wangu nchini Uingereza (2013 na 2015-2018) uliniruhusu kujenga mizizi ya kitaalamu na kuthamini mchanganyiko wa mila na usasa.",
+        galleryTitle: "Picha za Uingereza",
+        gallerySub:
+          "Kumbukumbu kutoka London, Brighton, Canterbury, na hatua ya kitaaluma iliyoipa safari yangu sura nchini Uingereza.",
+        backToCountry: "Rudi Uingereza",
       },
       kenya: {
         name: "Kenya: Mapigo ya Afrika Mashariki",
         desc: "Kuishi Kenya mwaka 2014 kulinipa mtazamo mpya juu ya uvumbuzi wa Afrika Mashariki na uzuri wa asili.",
+        galleryTitle: "Picha za Kenya",
+        gallerySub:
+          "Picha kutoka Nairobi, Maasai Mara, Ngong Hills, na watu pamoja na maeneo yaliyoacha alama katika kipindi changu cha Kenya.",
+        backToCountry: "Rudi Kenya",
       },
       canada: {
         name: "Kanada: Mpaka Mpya",
@@ -598,6 +618,10 @@ export const translations = {
       scotland: {
         name: "Uskoti: Nyanda za Juu na Historia",
         desc: "Kugundua uzuri wa asili na historia ndefu ya mandhari ya Uskoti wakati wa kukaa kwangu Uingereza.",
+        galleryTitle: "Picha za Uskoti",
+        gallerySub:
+          "Mkusanyiko mfupi wa picha za Uskoti, kutoka alama za mijini hadi mandhari ya vilima wakati wa safari zangu za Uingereza.",
+        backToCountry: "Rudi Uskoti",
       },
     },
   },

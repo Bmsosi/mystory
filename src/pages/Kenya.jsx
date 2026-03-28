@@ -10,6 +10,7 @@ const Kenya = () => {
             description={t.countries.kenya.desc}
             timezone="Africa/Nairobi"
             coordinates={{ lat: -1.2921, lng: 36.8219 }}
+            galleryLink="/gallery/kenya"
         />
     );
 };
