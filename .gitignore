@@ -12,6 +12,20 @@ dist
 dist-ssr
 *.local
 
+# Local-only personal photos and gallery assets
+src/assets/*.jpg
+src/assets/*.jpeg
+src/assets/*.png
+src/burundi_gallery/
+src/canada_gallery/
+src/chiapas_gallery/
+src/egyptgallery/
+src/Egyptgallery/
+src/mexico_city_gallery/
+src/oaxaca_gallery/
+src/queretaro_gallery/
+src/senegal_gallery/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

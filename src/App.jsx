@@ -21,9 +21,12 @@ import EgyptGallery from "./pages/EgyptGallery";
 import MexicoGallery from "./pages/MexicoGallery";
 import CanadaGallery from "./pages/CanadaGallery";
 import { LanguageProvider } from "./components/LanguageContext";
+import useImageProtection from "./hooks/useImageProtection";
 import "./App.css";
 
 function App() {
+  useImageProtection();
+
   return (
     <LanguageProvider>
       <Router>
