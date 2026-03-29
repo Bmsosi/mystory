@@ -10,8 +10,7 @@ const Rwanda = () => {
             description={t.countries.rwanda.desc}
             timezone="Africa/Kigali"
             coordinates={{ lat: -1.9403, lng: 29.8739 }}
-            galleryLink={null}
-            galleryComingSoon
+            galleryLink="/gallery/rwanda"
         />
     );
 };

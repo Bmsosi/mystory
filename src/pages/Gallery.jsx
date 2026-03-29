@@ -19,10 +19,6 @@ import scotlandImg from "../countryimages/scotland.png";
 
 const Gallery = () => {
   const { t, language } = useLanguage();
-  const handleComingSoon = (event) => {
-    event.preventDefault();
-    window.alert("Gallery coming soon");
-  };
 
   useEffect(() => {
     document.title = `${t.nav.gallery} | My Story Journey`;
@@ -113,11 +109,11 @@ const Gallery = () => {
       count: kenyaCount,
     },
     { name: t.countries.canada.name, path: "/gallery/canada", image: canadaImg, count: canadaCount },
-    { name: t.countries.uganda.name, path: "#", image: ugandaImg, count: 0 },
-    { name: t.countries.rwanda.name, path: "#", image: rwandaImg, count: 0 },
+    { name: t.countries.uganda.name, path: "/gallery/uganda", image: ugandaImg, count: 0 },
+    { name: t.countries.rwanda.name, path: "/gallery/rwanda", image: rwandaImg, count: 0 },
     {
       name: t.countries.tanzania.name,
-      path: "#",
+      path: "/gallery/tanzania",
       image: tanzaniaImg,
       count: 0,
     },
@@ -177,7 +173,6 @@ const Gallery = () => {
                 to={g.path}
                 className="gallery-card-link"
                 style={{ textDecoration: "none" }}
-                onClick={g.path === "#" ? handleComingSoon : undefined}
               >
                 <div
                   className="gallery-hub-card glass"

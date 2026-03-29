@@ -12,7 +12,6 @@ const CountryTemplate = ({
     galleryLink = "/gallery",
     themeClass = "",
     reverseLayout = false,
-    galleryComingSoon = false,
 }) => {
     const [currentTime, setCurrentTime] = useState('');
     const [weather, setWeather] = useState({ temp: '...', condition: 'Loading...' });
@@ -23,11 +22,6 @@ const CountryTemplate = ({
 
     const toggleLang = () => setIsLangOpen(!isLangOpen);
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-    const handleComingSoon = () => {
-        window.alert('Gallery coming soon');
-        setIsMenuOpen(false);
-    };
-
     const changeLanguage = (lang) => {
         setLanguage(lang);
         setIsLangOpen(false);
@@ -107,13 +101,7 @@ const CountryTemplate = ({
                         <Link to="/" onClick={() => setIsMenuOpen(false)}>{t.nav.home}</Link>
                         <a href="/#projects" onClick={() => setIsMenuOpen(false)}>{t.nav.projects}</a>
                         <Link to="/journal" onClick={() => setIsMenuOpen(false)}>{t.nav.journal}</Link>
-                        {galleryComingSoon ? (
-                            <button type="button" className="nav-link-button" onClick={handleComingSoon}>
-                                {t.nav.gallery}
-                            </button>
-                        ) : (
-                            galleryLink && <Link to={galleryLink} onClick={() => setIsMenuOpen(false)}>{t.nav.gallery}</Link>
-                        )}
+                        {galleryLink && <Link to={galleryLink} onClick={() => setIsMenuOpen(false)}>{t.nav.gallery}</Link>}
                     </div>
                 </div>
             </nav>
@@ -124,11 +112,7 @@ const CountryTemplate = ({
                         <p className="country-description">{description}</p>
 
                         <div className="action-links">
-                            {galleryComingSoon ? (
-                                <button type="button" className="cta-button" onClick={handleComingSoon}>{t.gallery.viewGallery}</button>
-                            ) : (
-                                <Link to={galleryLink} className="cta-button">{t.gallery.viewGallery}</Link>
-                            )}
+                            <Link to={galleryLink} className="cta-button">{t.gallery.viewGallery}</Link>
                             <Link to="/" className="cta-button secondary">{t.gallery.backToHome}</Link>
                         </div>
                     </div>

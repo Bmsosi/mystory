@@ -23,6 +23,9 @@ import CanadaGallery from "./pages/CanadaGallery";
 import EnglandGallery from "./pages/EnglandGallery";
 import KenyaGallery from "./pages/KenyaGallery";
 import ScotlandGallery from "./pages/ScotlandGallery";
+import UgandaGallery from "./pages/UgandaGallery";
+import RwandaGallery from "./pages/RwandaGallery";
+import TanzaniaGallery from "./pages/TanzaniaGallery";
 import { LanguageProvider } from "./components/LanguageContext";
 import useImageProtection from "./hooks/useImageProtection";
 import "./App.css";
@@ -45,6 +48,9 @@ function App() {
           <Route path="/gallery/england" element={<EnglandGallery />} />
           <Route path="/gallery/kenya" element={<KenyaGallery />} />
           <Route path="/gallery/scotland" element={<ScotlandGallery />} />
+          <Route path="/gallery/uganda" element={<UgandaGallery />} />
+          <Route path="/gallery/rwanda" element={<RwandaGallery />} />
+          <Route path="/gallery/tanzania" element={<TanzaniaGallery />} />
           <Route path="/career" element={<CareerStory />} />
           <Route path="/uganda" element={<Uganda />} />
           <Route path="/rwanda" element={<Rwanda />} />
