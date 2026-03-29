@@ -22,8 +22,8 @@ const EgyptGallery = () => {
         return () => window.removeEventListener('keydown', handleEsc);
     }, []);
 
-    // Dynamically import all images from the egyptgallery directory
-    const images = import.meta.glob('../egyptgallery/*.{jpg,jpeg,png,JPG}', { eager: true, query: '?url', import: 'default' });
+    // Dynamically import all images from the Egyptgallery directory
+    const images = import.meta.glob('../Egyptgallery/*.{jpg,jpeg,png,JPG}', { eager: true, query: '?url', import: 'default' });
     const displayImages = Object.values(images);
     const visibleImages = displayImages.slice(0, visibleCount);
     const hasMore = visibleCount < displayImages.length;
