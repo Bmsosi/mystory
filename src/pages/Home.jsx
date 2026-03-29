@@ -98,12 +98,11 @@ function Home() {
             <nav className="navbar">
                 <div className="nav-content">
                     <div className="logo-brand">
-                        <span className="logo-curly top">Muco</span>
                         <div className="globe-wrapper">
                             <span className="globe-icon">🌐</span>
                             <span className="logo-title">My Story</span>
                         </div>
-                        <span className="logo-curly bottom">Journey</span>
+                        <span className="logo-curly bottom">Muco A.</span>
                     </div>
 
                     <div className="lang-container">

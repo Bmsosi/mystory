@@ -64,12 +64,8 @@ html {
   font-weight: 700;
 }
 
-.logo-curly.top {
-  margin-bottom: -8px;
-}
-
 .logo-curly.bottom {
-  margin-top: -8px;
+  margin-top: -2px;
 }
 
 .globe-wrapper {
@@ -101,11 +97,13 @@ html {
 .logo-title {
   position: absolute;
   font-weight: 900;
-  font-size: 0.85rem;
+  font-size: 0.7rem;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-  white-space: nowrap;
-  letter-spacing: 1px;
+  width: 42px;
+  text-align: center;
+  line-height: 1.05;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
   z-index: 2;
   pointer-events: none;

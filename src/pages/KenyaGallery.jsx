@@ -47,12 +47,11 @@ const KenyaGallery = () => {
       <nav className="navbar">
         <div className="nav-content">
           <Link to="/" className="logo-brand">
-            <span className="logo-curly top">Muco</span>
             <div className="globe-wrapper">
               <span className="globe-icon">ðŸŒ</span>
               <span className="logo-title">My Story</span>
             </div>
-            <span className="logo-curly bottom">Journey</span>
+            <span className="logo-curly bottom">Muco A.</span>
           </Link>
           <div className="nav-links">
             <Link to="/kenya">{backToCountry}</Link>
