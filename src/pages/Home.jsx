@@ -30,9 +30,9 @@ function Home() {
         { key: 'england', icon: englandImg, path: '/england' },
         { key: 'kenya', icon: kenyaImg, path: '/kenya' },
         { key: 'canada', icon: canadaImg, path: '/canada' },
-        { key: 'uganda', icon: ugandaImg, path: '/uganda' },
-        { key: 'rwanda', icon: rwandaImg, path: '/rwanda' },
-        { key: 'tanzania', icon: tanzaniaImg, path: '/tanzania' },
+        { key: 'uganda', icon: ugandaImg, path: '/uganda', galleryComingSoon: true },
+        { key: 'rwanda', icon: rwandaImg, path: '/rwanda', galleryComingSoon: true },
+        { key: 'tanzania', icon: tanzaniaImg, path: '/tanzania', galleryComingSoon: true },
         { key: 'senegal', icon: senegalImg, path: '/senegal' },
         { key: 'scotland', icon: scotlandImg, path: '/scotland' },
     ];
@@ -45,6 +45,10 @@ function Home() {
     const changeLanguage = (lang) => {
         setLanguage(lang);
         setIsLangOpen(false);
+    };
+    const handleGalleryComingSoon = (event) => {
+        event.preventDefault();
+        window.alert('Gallery coming soon');
     };
 
     // Scroll reveal hooks for each section
@@ -274,7 +278,12 @@ function Home() {
                             fallbackCountries?.[item.key]?.name;
                         if (!translatedName) return null;
                         return (
-                            <Link key={item.key} to={item.path} className="travel-card reveal">
+                            <Link
+                                key={item.key}
+                                to={item.path}
+                                className="travel-card reveal"
+                                onClick={item.galleryComingSoon ? handleGalleryComingSoon : undefined}
+                            >
                                 <img src={item.icon} alt={translatedName} className="travel-icon" loading="lazy" />
                                 {translatedName}
                             </Link>

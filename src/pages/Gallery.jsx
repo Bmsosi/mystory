@@ -19,6 +19,10 @@ import scotlandImg from "../countryimages/scotland.png";
 
 const Gallery = () => {
   const { t, language } = useLanguage();
+  const handleComingSoon = (event) => {
+    event.preventDefault();
+    window.alert("Gallery coming soon");
+  };
 
   useEffect(() => {
     document.title = `${t.nav.gallery} | My Story Journey`;
@@ -173,6 +177,7 @@ const Gallery = () => {
                 to={g.path}
                 className="gallery-card-link"
                 style={{ textDecoration: "none" }}
+                onClick={g.path === "#" ? handleComingSoon : undefined}
               >
                 <div
                   className="gallery-hub-card glass"

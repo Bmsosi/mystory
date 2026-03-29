@@ -10,6 +10,8 @@ const Tanzania = () => {
             description={t.countries.tanzania.desc}
             timezone="Africa/Dar_es_Salaam"
             coordinates={{ lat: -6.7924, lng: 39.2083 }}
+            galleryLink={null}
+            galleryComingSoon
         />
     );
 };

@@ -10,6 +10,8 @@ const Uganda = () => {
             description={t.countries.uganda.desc}
             timezone="Africa/Kampala"
             coordinates={{ lat: 0.3476, lng: 32.5825 }}
+            galleryLink={null}
+            galleryComingSoon
         />
     );
 };
